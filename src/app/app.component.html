@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Contents</h2>
+  <button (click)="back()">Back</button>
+  <br>
+  <br>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Created Date</th>
+      <th>Modified Date</th>
+    </tr>
+    <tr *ngFor="let content of contents" (click)="getData(content.name, content.path, content.directory)">
+        <td>{{content.name}}</td>
+        <td>{{content.createdDate}}</td>
+        <td>{{content.modifiedDate}}</td>
+    </tr>
+  </table>
+</div>
